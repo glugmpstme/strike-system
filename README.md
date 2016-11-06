@@ -1,5 +1,7 @@
 # strike-system
 A web application for keeping track of the strikes assigned to each member of GLUG.
+
+
 1)Stage 1- Front-End
 
   Creating the front-end.
