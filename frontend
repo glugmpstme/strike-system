@@ -1,0 +1,41 @@
+<html>
+<head>
+<link type="text/css" href="bootstrap.css" rel="stylesheet"/>
+
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+	
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" id="t1" class="form-control" >
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Slack Username</label>
+				<input type="text" id="t2" class="form-control" >
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+			<label>Email</label>
+			<input type ="text" id="t5" class="form-control" >
+		</div>
+		
+	</div>
+</div>
+<button id="btn" type="button" class="btn btn-danger" style="width:inherit">ADD STRIKE</button>
+
+<button id="btn" type="button" class="btn btn-danger" style="width:inherit">REMOVE STRIKE</button>			
+
+</body>
+</html>
