@@ -37,3 +37,7 @@ nav{
     color:black;
     text-shadow: 20%;
 }
+#first{
+    display:block;
+    text-align: center;
+}
