@@ -8,15 +8,15 @@
 
 </head>
 <body>
-    <nav><p id="first">Created By</p> <p id="first">Glug</p></nav>
+    <nav><p id="first">Strike trackers</p> <p id="first">Glug</p></nav>
 
 <div class="container">
 	<div class="row">
 
 		<div class="col-xs-12">
 			<div class="form-group">
-				<label>Name</label>
-				<input type="text" id="t1" class="form-control" >
+				<label>Slack username</label>
+				<input type="text" id="txtusrnm" class="form-control" >
 			</div>
 		</div>
 
@@ -24,7 +24,7 @@
 
 		<div class="col-xs-12">
 			<label>Email</label>
-			<input type ="text" id="t5" class="form-control" >
+			<input type ="text" id="txteml" class="form-control" >
 		</div>
 
 	</div>
@@ -38,9 +38,10 @@
 <script>
 	   $(document).ready(function(){
 	   		$('#btn1').click(function(){
-			    var nm=$('#t1').val();
-				var un=$('#t2').val();
-				var url="http://localhost/strike-system/display.php?txtname="+nm+"&txtusername="+un;		
+			    var nm=$('#txtusrnm').val();
+				var un=$('#txteml').val();
+				var sturl="http://localhost/strike-tracker-master/display.php?txtusrnm="+nm+"&txteml="+un;
+				
     });
 });
 </script>
