@@ -27,7 +27,26 @@
 
 `use <db_name>;`
 
+## Tables
 
+### karma
+
+```sql
+CREATE TABLE karma
+(
+uid int(8) NOT NULL,
+name varchar(160) NOT NULL,
+nice int(1),
+PRIMARY KEY (uid)
+);
+```
+### Values
+
+```sql
+INSERT INTO karma VALUES (87724018, "Pranjali Basmatkar", 0);
+INSERT INTO karma VALUES (67747814, "Aishwarya Sivakumar", 9);
+INSERT INTO karma VALUES (72733414, "Anushri Arora", 4);
+```
 
 # PHP
 

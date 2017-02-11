@@ -15,16 +15,21 @@
         exit;
     }
 
-    $name = $_POST['txtname'];
-    $username = $_POST['txtusername'];
-    $sel = "select strikes from database where name = '$name' and username = '$username'";
-    $strikes = mysql_query($sel);
-    while ($line = mysql_fetch_array($ans, MYSQL_ASSOC)){
-        echo "NAME: {$line['name']}  <br>".
-        "STRIKES: {$line['strikes']} <br>".
-        "<br>";
+    $myArray = array();
+
+    // we should use MYSQLI_USE_RESULT if we have to retrieve a large amount of data 
+    if ($result = mysqli_query($link, "SELECT * FROM {$db_table}")) {
+        //printf("Select returned %d rows.\n", mysqli_num_rows($result));
+
+        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $myArray[] = $row;
+        }
+        echo json_encode($myArray);
+
+        // free result set
+        mysqli_free_result($result);
     }
 
-    echo "data fetched!! <br>";
-    mysql_close($con);
+    
+    mysqli_close($link);
 ?>
