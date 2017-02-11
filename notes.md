@@ -5,13 +5,13 @@
 
 ## Starting server
 
-```sh
+```shell
 sudo systemctl start mariadb.service
 ```
 
 ## Root login
 
-```bash
+```shell
 mysql -u root -p
 ```
 
