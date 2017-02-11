@@ -1,31 +1,40 @@
-> Written wrt GNU/Linux 4.9.8-1-ARCH x86_64
-> php 7.1.1, Zend Engine v3.1.0
-> MariaDB Server 10.1.21
+> Written w.r.t. _php 7.1.1_ and _Zend Engine v3.1.0_ with 
+> _MariaDB Server 10.1.21_ running on *GNU/Linux 4.9.8-1-ARCH x86_64*
 
 # MariaDB
 
 ## Starting server
 
-`sudo systemctl start mariadb.service`
+```bash
+sudo systemctl start mariadb.service
+```
 
 ## Root login
 
-`mysql -u root -p`
+```bash
+mysql -u root -p
+```
 
 ### Tip
 > Do not forget to terminate SQL statements with a semicolon;
 
 ## Check current users with remote access privileged
 
-`SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';`
+```sql
+SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';
+```
 
 ## Show databses
 
-`show databases;`
+```sql
+show databases;
+```
 
 ## Use databse
 
-`use <db_name>;`
+```sql
+use db_name;
+```
 
 ## Tables
 
