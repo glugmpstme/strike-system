@@ -5,7 +5,7 @@
 
 ## Starting server
 
-```bash
+```sh
 sudo systemctl start mariadb.service
 ```
 
