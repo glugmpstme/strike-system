@@ -1,7 +1,11 @@
 <?php
+
+    require("db_credentials.php");
+
     //mysql_connect has been removed from php
+    //mysqli being mysql improved
     //no one likes unexpected deaths
-    $link = mysqli_connect("localhost", db_uname, db_pwd, "eyeofglug");
+    $link = mysqli_connect($db_host, $db_uname, $db_pwd, $db_base);
 
     //appropriate error handling per new php conventions
     if (!$link) {
@@ -11,7 +15,6 @@
         exit;
     }
 
-    mysql_select_db("strike-system") or die("Connection Failed");
     $name = $_POST['txtname'];
     $username = $_POST['txtusername'];
     $sel = "select strikes from database where name = '$name' and username = '$username'";
