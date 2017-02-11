@@ -3,8 +3,10 @@
 <link type="text/css" href="bootstrap.css" rel="stylesheet"/>
 
 <style type="text/css">
-
 </style>
+
+<script src="jquery-1.12.4.min.js" type:"text/javascript" src="jquery.js">
+</script>
 
 </head>
 <body>
@@ -27,23 +29,35 @@
 			<input type ="text" id="txteml" class="form-control" >
 		</div>
 
+		<div id="output"> </div>
+        <button id="btn1" type="button" class="btn btn-danger" style="width:inherit">VIEW</button>
+
 	</div>
 </div>
-<button id="btn1" type="button" class="btn btn-danger" style="width:inherit">VIEW</button>
-<button id="btn2" type="button" class="btn btn-danger" style="width:inherit">ADD STRIKE</button>
 
-<button id="btn3" type="button" class="btn btn-danger" style="width:inherit">REMOVE STRIKE</button>
+
 
 
 <script>
 	   $(document).ready(function(){
+	   	     alert("ready");
 	   		$('#btn1').click(function(){
+	   			alert("view button");
 			    var un=$('#txtusrnm').val();
 				var em=$('#txteml').val();
 				var sturl="http://localhost/strike-tracker-master/display.php?txtusrnm="+un+"&txteml="+em;
-				
-    });
-});
+				$.ajax({
+				 type:GET,
+				 url: surl,
+				 success: function(data)
+				 { alert("success");
+				 	var strikes;
+				 	$('#output').html("<b>Strikes: </b>"+data);
+				 },
+
+				});
+            });
+        });
 </script>
     
 </body>
